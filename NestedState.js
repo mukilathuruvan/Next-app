@@ -1,5 +1,5 @@
 const redux = require("redux");
-const produce = require('immer').produce
+const produce = require("immer").produce;
 const actionTypes = {
   updateCity: "UPDATE_CITY",
 };
