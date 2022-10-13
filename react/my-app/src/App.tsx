@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./Component/Header";
+import ToDoApp from "./Component/ToDoApp";
+import AppContext from "./Context/AppContext";
 
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
+    <AppContext>
+      <ToDoApp />
+    </AppContext>
   );
 }
 

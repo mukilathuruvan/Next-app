@@ -1,27 +1,29 @@
 import React, { useState } from "react";
-import { contextValueType } from "./AllTypes";
-const Context = React.createContext<null>(null);
-const AppContext = () => {
-  const [person, setPerson] = useState({} as contextValueType);
-  const addPerson = () => {};
+import {
+  taskType,
+  contextValueType,
+  ContextPropType,
+  editTask,
+} from "./AllTypes";
+
+export const TaskContext = React.createContext<null | contextValueType>(null);
+const AppContext = ({ children }: ContextPropType) => {
+  const [tasks, setTask] = useState<taskType>([]);
+  const [edit, setEdit] = useState<editTask | null>(null);
+  let addTask = (title: string) => {
+    setTask([...tasks, { id: ++tasks.length, title, done: false }]);
+  };
+  let deleteTask = (id: number) => {
+    if (tasks.length > 1) {
+      const result = tasks.filter((item) => item.id !== id);
+      setTask(result);
+    }
+  };
   return (
-    <Context.Provider value={null}>
-      <input
-        type="text"
-        value={person.fname}
-        onChange={(w) => setPerson({ ...person, fname: w.target.value })}
-      />
-      <input
-        type="text"
-        value={person.lname}
-        onChange={(e) => setPerson({ ...person, lname: e.target.value })}
-      />
-      <input
-        type="text"
-        value={person.course}
-        onChange={(e) => setPerson({ ...person })}
-      />
-    </Context.Provider>
+    <TaskContext.Provider
+      value={{ tasks, addTask, deleteTask, setEdit, edit, setTask }}>
+      {children}
+    </TaskContext.Provider>
   );
 };
 
