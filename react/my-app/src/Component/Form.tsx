@@ -5,7 +5,11 @@ const Form = () => {
   const value = useContext(TaskContext);
   const updateTask = (id: number, title: string, done: boolean) => {
     if (value?.edit) {
-      value.setTask([...value.tasks, { id, title, done }]);
+      const final = value.tasks.map((item) =>
+        item.id === id ? { id, title, done } : item
+      );
+      value.setTask(final);
+      // value.setTask([...value.tasks, { id, title, done }]);
       console.log(value.edit);
     }
   };
