@@ -1,6 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-const initialState = {
+type initialType = {
+    iceCount: number;
+    price: number;
+}
+const initialState:initialType = {
     iceCount: 10,
     price:200,
 }

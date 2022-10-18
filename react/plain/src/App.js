@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Homepage from './Component/Homepage';
+import logo from "./logo.svg";
+import "./App.css";
+import Homepage from "./Component/Homepage";
+import Context from "./Class/Context";
+import CompoA from "./Class/CompoA";
 
 function App() {
   return (
-    <div className="App">
-     <Homepage/>
-    </div>
+    <Context>
+      <div className="App">
+        <CompoA/>
+      </div>
+    </Context>
   );
 }
 
