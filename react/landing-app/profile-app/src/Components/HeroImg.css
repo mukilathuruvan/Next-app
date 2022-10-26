@@ -1,0 +1,49 @@
+.mask{
+    width: 100%;
+    height:100vh;
+    position:relative;
+
+}
+.intro-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    opacity: 0.6;
+}
+.mask::after{
+    content: "";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#000;
+    opacity: .37;
+    z-index: -7;
+}
+.hero{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.hero .content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left:13%;
+    
+    
+}  
+.hero .content  h1{
+    margin: 0.04rem 0 2rem 0;
+}
+.hero-link a{
+    margin:0  0.5rem;
+}
+@media screen and (max-width:1024px) {
+    .hero .content{
+        left:3%;
+    }
+}

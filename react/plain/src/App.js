@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import Parent from "./Component/Parent";
+import HomePage from "./Component/Homepage";
 
 function App() {
   return (
     <div className="App">
-      <Parent />
+      <HomePage />
     </div>
   );
 }
