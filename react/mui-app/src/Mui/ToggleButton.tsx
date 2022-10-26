@@ -1,4 +1,4 @@
-import { ToggleButtonGroup, ToggleButton,Typography } from "@mui/material";
+import { ToggleButtonGroup, ToggleButton, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import React, { useState } from "react";
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
@@ -11,20 +11,22 @@ const ToggleButtonCompo = () => {
     e: React.MouseEvent<HTMLElement>,
     data: string
   ) => {
-      setFormat(data);
-      console.log(format)
+    setFormat(data);
+    console.log(format);
   };
+  const am = format ?? "none";
   return (
     <div>
-      <Typography variant="h6">
+      <div style={{ fontWeight: am }}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima enim
         magni autem, quasi aliquid explicabo doloribus sequi animi culpa eius
         veniam odit aut aspernatur itaque velit distinctio expedita corporis ut.
-      </Typography>
-      <Stack>
+      </div>
+      <Stack alignItems={"center"}>
         <ToggleButtonGroup
           value={format}
           exclusive
+          orientation="vertical"
           onChange={handleChangeFormat}>
           <ToggleButton value="bold">
             <FormatBoldIcon />
