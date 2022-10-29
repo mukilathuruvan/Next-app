@@ -1,5 +1,5 @@
 import React from "react";
-import  Link  from "next/link";
+import Link from "next/link";
 const Header = () => {
   return (
     <nav>
@@ -9,7 +9,7 @@ const Header = () => {
       {/* <Link href="/nested/login">
         <a>Login</a>
       </Link> */}
-      <Link href="/contact">
+      <Link href={`/admin/${300}`}>
         <a>Contact</a>
       </Link>
     </nav>

@@ -1,16 +1,11 @@
 import './App.css';
-import HomePage from './Component/HomePage';
-import Parent from './Component/Parent';
-import TagPrac from './Component/TagPrac';
-import ToggleButtonCompo from './Mui/ToggleButton';
+import SelectCompo from './Mui/SelectCompo';
+import TextFeildCompo from './Mui/TextFeildCompo';
 
 function App() {
   return (
     <div className="App">
-      {/* <HomePage />
-      <ToggleButtonCompo/> */}
-      {/* <TagPrac/> */}
-      <Parent/>
+     <SelectCompo/>
     </div>
   );
 }

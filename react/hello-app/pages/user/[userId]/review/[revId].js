@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 
-const revId = () => {
+const RevIdCompo = () => {
   const router = useRouter();
   const { userId, revId } = router.query;
   console.log(revId);
@@ -13,4 +13,4 @@ const revId = () => {
   );
 };
 
-export default revId;
+export default RevIdCompo;
