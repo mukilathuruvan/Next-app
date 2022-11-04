@@ -1,12 +1,15 @@
-import './App.css';
-import SelectCompo from './Mui/SelectCompo';
-import TextFeildCompo from './Mui/TextFeildCompo';
+import { Provider } from "react-redux";
+import "./App.css";
+import store from "./Redux/Store";
+import Another from "./Redux/Another";
 
 function App() {
   return (
-    <div className="App">
-     <SelectCompo/>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Another />
+      </div>
+    </Provider>
   );
 }
 

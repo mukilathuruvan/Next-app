@@ -8,13 +8,16 @@ const TodoList = () => {
     setEdit(item);
     console.log(edit);
   };
+  const delete=(id) => {
+    
+  }
   return (
     <div>
       {todo.map((item) => (
         <li key={item.id}>
           <h2>{item.title}</h2>
           <button onClick={() => editTask(item.id)}>Edit</button>
-          <button>Delete</button>
+          <button onClick={()=>delete()}>Delete</button>
         </li>
       ))}
     </div>

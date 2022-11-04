@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
   task: [{ id: 2, title: "visiting temple", done: false }],
 };

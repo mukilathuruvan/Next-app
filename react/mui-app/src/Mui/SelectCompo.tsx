@@ -4,8 +4,7 @@ import React, { useState } from "react";
 const SelectCompo = () => {
   const [course, setCourse] = useState<string[]>([]);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const val = e.target.value;
-      const soo
+    const val = e.target.value;
     const dum = typeof val === "string" ? val.split(",") : val;
     console.log(course);
 

@@ -1,25 +1,35 @@
 import { Bike, PrismaClient } from "@prisma/client";
 import React, { useState } from "react";
+import { InferGetServerSidePropsType } from "next";
+
 const prisma = new PrismaClient();
 
 async function createBike(bike: Bike) {
   const response = await fetch("api/bikes", {
     method: "POST",
     body: JSON.stringify(bike),
-  }); 
+  });
 
   return await response.json();
 }
-const BikesList = ({ data }: { data: Bike[] }) => {
-    const [bikes, setBikes] = useState(data)
-    
-    const [bike, setBike] = useState({} as Bike);
-    console.log(bikes)
+const BikesList = ({
+      data,
+    }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  const [bikes, setBikes] = useState(data);
+
+  const [bike, setBike] = useState({} as Bike);
+  const clear = () => {
+    setBike({ ...bike, brand: "", model: "" });
+  };
+  console.log(bikes);
   return (
     <div>
       <h2>showing bike page</h2>
 
-      <form onSubmit={() => createBike(bike)}>
+      <form
+        onSubmit={() => {
+          createBike(bike);
+        }}>
         <input
           type="text"
           value={bike.brand}
@@ -50,11 +60,12 @@ const BikesList = ({ data }: { data: Bike[] }) => {
 
 export default BikesList;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await prisma.bike.findMany();
   return {
     props: {
       data,
     },
+    // revalidate: 2,
   };
 }

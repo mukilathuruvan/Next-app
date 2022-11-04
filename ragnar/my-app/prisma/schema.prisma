@@ -22,3 +22,9 @@ model Bike {
   brand String
   model String
 }
+
+model Todo {
+  id    String  @id @default(cuid())
+  title String
+  done  Boolean
+}
