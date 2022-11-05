@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Sample from "./Component/Sample";
-
+import CakeView from "./raveen/CakeView";
+import './App.css'
 function App() {
   return (
     <div className="App">
-      <Sample />
+      <CakeView />
     </div>
   );
 }

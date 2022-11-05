@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// model Bike {
+//   id    String @id
+//   brand String
+//   model String
+// }
+
+// model Todo {
+//   id    String  @id
+//   title String
+//   done  Boolean
+// }
+
+// model User {
+//   id        String @id
+//   firstName String
+//   lastName  String
+//   email     String
+// }
+
+// model Course{
+//   id String @id
+//   Course_name String
+//   fees Int
+// }
+// model Person{
+//   personId String @id @default(uuid())
+//   personName String 
+//   perso
+// }
+model User {
+  id      String @id @default(uuid())
+  name    String
+  email   String
+  written Post[] @relation("one") //this refers to multiple foriegn key relationship
+  fav     Post[] @relation("two")
+}
+
+model Post {
+  id       String   @id @default(uuid())
+  rating   Float
+  postedAt DateTime
+  author   User     @relation("one", fields: [authorId], references: [id])
+  // here one is relationship name (unique)
+  authorId String
+  favby    User     @relation("two", fields: [favById], references: [id])
+  favById  String
+}
+
+
+model Bike{
+  id  String @id @default(uuid())
+}

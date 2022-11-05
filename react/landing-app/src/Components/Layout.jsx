@@ -1,20 +1,10 @@
-import { Container, Stack } from "@mui/material";
 import React from "react";
-import NavBar from "./header/NavBar";
-import Title from "./Titlt/Title";
+import NavBar from "./NavBar";
 
 const Layout = () => {
   return (
-    <div className="body">
+    <div>
       <NavBar />
-      <Container>
-        <div className="container">
-          <div>
-            <Title />
-          </div>
-          <div className="container-img"></div>
-        </div>
-      </Container>
     </div>
   );
 };

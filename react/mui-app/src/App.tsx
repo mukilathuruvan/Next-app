@@ -1,13 +1,13 @@
 import { Provider } from "react-redux";
 import "./App.css";
 import store from "./Redux/Store";
-import Another from "./Redux/Another";
+import Layout from "./Component/AgeCal/Layout";
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Another />
+        <Layout/>
       </div>
     </Provider>
   );
