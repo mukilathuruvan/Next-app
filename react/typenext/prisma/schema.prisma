@@ -55,7 +55,9 @@ model Post {
   favById  String
 }
 
-
-model Bike{
-  id  String @id @default(uuid())
+model Student {
+  id         String @id @default(uuid())
+  name       String
+  department String
+  course     String
 }

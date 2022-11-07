@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e084eb-6712-4181-97ea-b4b21580066d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ragnar/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ragnar/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ragnar/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ragnar/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ragnar/my-app/pages/bikes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ragnar/my-app/pages/bikes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/plain/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react/plain/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/plain/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react/plain/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/plain/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react/plain/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/plain/src/raveen/CakeView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/plain/src/raveen/CakeView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/plain/src/raveen/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/plain/src/raveen/Store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/typenext/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/../react/typenext/prisma/schema.prisma" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
